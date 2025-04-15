@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Bento grid</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      background-color: #f1f9fd;
+    }
+
+    .general-box {
+      margin: 4rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px;
+      min-height: 100vh;
+      justify-content: center;
+    }
+
+    img {
+      height: 50px;
+      width: 150px;
+    }
+
+    .container {
+      font-family: "Roboto", sans-serif;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+   
+
+    .create {
+      background-color: #f8c8d6af;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-row: span 1;
+    }
+
+    .create > h2{
+      font-family: "Roboto", sans-serif;
+      color: #000000;
+    }
+
+    .createImg {
+      height: 70px;
+      width: 150px;
+    }
+
+    .social {
+      background-color: #7e11d8;
+      color: #ffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: span 2;
+    }
+
+    .socialImg {
+      height: 30px;
+      width: 150px;
+    }
+
+    .schedule {
+      background-color: #f0ecece5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-row: span 2;
+      padding-right: 0;
+    }
+
+   .scheduleImg {
+      height: 250px;
+      width: 300px;
+      padding-left: 30px;
+      
+    }
+    
+    .write {
+      background-color: #ffc760;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-row: span 2;
+    }
+
+    .writeImg {
+      height: 250px;
+      width: 250px;
+    }
+
+    .manage {
+      background-color: #f1e8e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .manageImg {
+      height: 50px;
+      width: 200px;
+    }
+
+    .maintain {
+      background-color: #ffc760;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 0;
+    }
+
+    .maintainImg {
+      height: 100px;
+    }
+
+    .fast {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fast > h2 {
+      font-size: 50px;
+    }
+
+    .grow {
+      background-color: #7e11d8;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      grid-column: span 2;
+    }
+
+    .growImg {
+      height: 200px;
+      width: 220px;
+    }
+
+
+    @media screen and (max-width: 720px) {
+
+      .general-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
+      }
+
+      .social {
+        grid-column: span 1;
+      }
+
+      .schedule {
+        grid-row: span 1;
+      }
+
+      .write {
+        grid-row: span 1;
+      }
+
+      .grow {
+        grid-column: span 1;
+      }
+
+      .container {
+        padding: 5px;
+      }
+
+      .general-box {
+        margin: 2rem;
+      }
+
+    }
+
+
+@media screen and (max-width: 1100px) and (min-width: 721px) {
+
+.general-box {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, 2fr);
+}
+
+.social {
+  grid-column: span 1;
+}
+
+.schedule {
+  grid-row: span 1;
+}
+
+.write {
+  grid-row: span 1;
+}
+
+.grow {
+  grid-column: span 1;
+}
+} 
+
+/* .container {
+  
+}
+
+*/
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="general-box">
+    <div class="create container">
+      <h2>Create and <br> schedule <br> content <br> quicker.</h2> 
+        <img class="createImg" src="/bento-grid-main/assets/images/illustration-create-post.webp" alt="post btn">
+    </div>
+    <div class="social container">
+      <h1>Social Media 10x Faster with AI</h1>
+      <img class="socialImg" src="/bento-grid-main/assets/images/illustration-five-stars.webp" alt="five stars">
+      <p>Over 4,000 5-star reviews</p>
+    </div>
+    <div class="schedule container">
+      <h2>Schedule to social media.</h2>
+      <img class="scheduleImg" src="/bento-grid-main/assets/images/illustration-schedule-posts.webp" alt="schedule post img">
+      <p>Optimize post timings to publish content at the perfect time for your audience.</p>
+    </div>
+    <div class="write container">
+      <h2>Write your content using AI</h2>
+      <img class="writeImg" src="/bento-grid-main/assets/images/illustration-ai-content.webp" alt="ai content img">
+    </div>
+    <div class="manage container">
+      <img class="manageImg" src="/bento-grid-main/assets/images/illustration-multiple-platforms.webp" alt="multiple platforms">
+      <h2>Manage multiple accounts and platforms</h2>
+    </div>
+    <div class="maintain container">
+      <h2>Maintain a consistent posting schedule</h2>
+      <img class="maintainImg" src="/bento-grid-main/assets/images/illustration-consistent-schedule.webp" alt="consistent schedule">
+    </div>
+    <div class="fast container">
+      <h2>>56%</h2>
+      <p>faster audience growth</p>
+      <img class="fastImg" src="/bento-grid-main/assets/images/illustration-audience-growth.webp" alt="audience">
+    </div>
+    <div class="grow container">
+      <img class="growImg" src="/bento-grid-main/assets/images/illustration-grow-followers.webp" alt="">
+      <h2>Grow followers with non-stop content.</h2>
+    </div>
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://x.com/0xgekco">Gekco</a>.
+  </div>
+</body>
+</html>
